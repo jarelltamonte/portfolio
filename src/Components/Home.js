@@ -175,7 +175,7 @@ const Home = () => {
                   Jarell Tamonté
                 </p>
                 <p className="brief-info">
-                  I'm an aspring <span className="b-text">Data Scientist</span>{" "}
+                  An aspring <span className="b-text">Data Scientist</span>{" "}
                   and Software Developer with a passion for creating innovative
                   solutions. I specialize in turning raw data into models and
                   findings that answer practical questions. My goal is to
