@@ -54,7 +54,7 @@ const Footer = () => {
                         GITHUB
                     </a>
 
-                    <a href="https://www.linkedin.com/in/jarell-tamonte-6033b6296/" target="_blank" rel="noopener noreferrer"
+                    <a href="https://www.linkedin.com/in/jarell-tamont%C3%A9-6033b6296/" target="_blank" rel="noopener noreferrer"
                         onMouseMove={(e) => handleMouseMove(e, setLinkedinPosition)}
                         onMouseLeave={() => handleMouseLeave(setLinkedinPosition)}
                         style={{
