@@ -54,16 +54,6 @@ const Footer = () => {
                         GITHUB
                     </a>
 
-                    <a href="https://www.instagram.com/whoatethesushi/" target="_blank" rel="noopener noreferrer"
-                        onMouseMove={(e) => handleMouseMove(e, setInstagramPosition)}
-                        onMouseLeave={() => handleMouseLeave(setInstagramPosition)}
-                        style={{
-                            transform: `translate(${instagramPosition.x * 0.1}px, ${instagramPosition.y * 0.1}px)`,
-                            transition: "transform 0.1s ease-out"
-                        }}>
-                        INSTAGRAM
-                    </a>
-
                     <a href="https://www.linkedin.com/in/jarell-tamonte-6033b6296/" target="_blank" rel="noopener noreferrer"
                         onMouseMove={(e) => handleMouseMove(e, setLinkedinPosition)}
                         onMouseLeave={() => handleMouseLeave(setLinkedinPosition)}
@@ -72,6 +62,16 @@ const Footer = () => {
                             transition: "transform 0.1s ease-out"
                         }}>
                         LINKEDIN
+                    </a>
+
+                     <a href="https://www.instagram.com/whoatethesushi/" target="_blank" rel="noopener noreferrer"
+                        onMouseMove={(e) => handleMouseMove(e, setInstagramPosition)}
+                        onMouseLeave={() => handleMouseLeave(setInstagramPosition)}
+                        style={{
+                            transform: `translate(${instagramPosition.x * 0.1}px, ${instagramPosition.y * 0.1}px)`,
+                            transition: "transform 0.1s ease-out"
+                        }}>
+                        INSTAGRAM
                     </a>
                 </div>
             </div>

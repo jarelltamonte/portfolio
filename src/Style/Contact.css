@@ -173,16 +173,6 @@
   text-decoration: underline;
 }
 
-
-.linkedin a {
-  text-decoration: none;
-  color: #ffffff;
-}
-
-.linkedin a:hover {
-  text-decoration: underline;
-}
-
 .time {
   margin-top: 20%;
 }

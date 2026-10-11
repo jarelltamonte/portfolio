@@ -24,7 +24,7 @@ export default function App() {
     <>
       {!isPreloaderDone && <Circle onPreloaderDone={handlePreloaderDone} />}
       {isPreloaderDone && (
-        <BrowserRouter>
+        <BrowserRouter basename="/portfolio">
           <ScrollToTop />
           <Navbar />
           <Routes>

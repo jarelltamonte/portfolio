@@ -16,7 +16,6 @@ const Contact = () => {
 
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [mailPosition, setMailPosition] = useState({ x: 0, y: 0 });
-  const [inPosition, setInPosition] = useState({ x: 0, y: 0 });
   const [phonePosition, setPhonePosition] = useState({ x: 0, y: 0 });
 
   const handleMouseMove = (e, setPosition) => {
@@ -83,15 +82,6 @@ const Contact = () => {
                     transform: `translate(${phonePosition.x * 0.1}px, ${phonePosition.y * 0.1}px)`,
                     transition: "transform 0.1s ease-out",
                   }}>+63 938 456 5033</p>
-                  <p className="contact-deet linkedin"
-                  onMouseMove={(e) => handleMouseMove(e, setInPosition)}
-                  onMouseLeave={() => handleMouseLeave(setInPosition)}
-                  style={{
-                    transform: `translate(${inPosition.x * 0.1}px, ${inPosition.y * 0.1}px)`,
-                    transition: "transform 0.1s ease-out",
-                  }}>
-                <a href="https://www.linkedin.com/in/jarell-tamont%C3%A9-6033b6296/" target="_blank" rel="noopener noreferrer">in/jarell-tamonté</a>
-              </p>
                 <p className="contact-deet email"
                   onMouseMove={(e) => handleMouseMove(e, setMailPosition)}
                   onMouseLeave={() => handleMouseLeave(setMailPosition)}
@@ -99,9 +89,8 @@ const Contact = () => {
                     transform: `translate(${mailPosition.x * 0.1}px, ${mailPosition.y * 0.1}px)`,
                     transition: "transform 0.1s ease-out",
                   }}>
-                <a href="mailto:jarelltamonte@gmail.com" target="_blank" rel="noopener noreferrer">jarelltamonte@gmail.com</a>
+                <a href="mailto:jarelltamonte@gmail.com">jarelltamonte@gmail.com</a>
               </p>
-                  
               </div>
               <div className='second-deet'>
                 <p className="contact-text location">LOCATION</p>
