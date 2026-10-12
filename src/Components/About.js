@@ -54,7 +54,7 @@ const About = () => {
               <p className="about-text">More of me...</p>
               <div className="line"></div>
               <p className="about-me-detail">
-                I have been fascinated by the ever-evolving world of technology
+                I have always been fascinated by the ever-evolving world of technology
                 since childhood, even though{" "}
                 <span className="highlight">
                   Computer Science wasn't my initial choice for a college major

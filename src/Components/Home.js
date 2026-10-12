@@ -175,8 +175,8 @@ const Home = () => {
                   Jarell Tamonté
                 </p>
                 <p className="brief-info">
-                  An aspring <span className="b-text">Data Scientist</span>{" "}
-                  and Software Developer with a passion for creating innovative
+                  An aspring <span className="b-text">Data Scientist</span> and
+                  Software Developer with a passion for creating innovative
                   solutions. I specialize in turning raw data into models and
                   findings that answer practical questions. My goal is to
                   leverage technology to solve real-world problems and make a
@@ -239,14 +239,16 @@ const Home = () => {
           <div className="vertical-line show-cont"></div>
           <div className="about-text">
             <p className="home-text-about show-cont">
-              I'm currently pursuing a Bachelor's degree in{" "}
-              <span className="a-text">Computer Science</span> at CIIT and I am
-              expected to graduate in 2027. My academic journey has equipped me
-              with a strong foundation in programming, algorithms, and data
-              structures, which I leverage in my projects and research. I am
-              passionate about applying my knowledge to real-world problems and
-              continuously expanding my skill set in the ever-evolving field of
-              technology.
+              I'm currently{" "}
+              <span className="a-text">
+                pursuing a Bachelor's degree in Computer Science
+              </span>{" "}
+              at CIIT and I am expected to graduate in 2027. My academic journey
+              has equipped me with a strong foundation in programming,
+              algorithms, and data structures, which I leverage in my projects
+              and research. I am passionate about applying my knowledge to
+              real-world problems and continuously expanding my skill set in the
+              ever-evolving field of technology.
             </p>
           </div>
         </div>
