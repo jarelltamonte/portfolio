@@ -264,9 +264,7 @@
 }
 
 @media (max-width: 760px) {
-  .contact-container{
-    padding: 0 0 12%;
-  }
+  
 
   .contact-app {
     justify-content: center;
@@ -367,11 +365,7 @@
   }
 }
 
-@media (max-width: 720px) {
-  .contact-app {
-    padding-top: 1%;
-  }
-}
+
 
 @media (max-width: 460px) {
   .form-textarea {

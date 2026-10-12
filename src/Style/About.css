@@ -799,6 +799,10 @@ body {
   .tech-icons{
     gap: 10px;
   }
+
+  .square{
+    bottom: -30% !important;
+  }
 }
 
 @media (max-width: 890px) {
@@ -828,6 +832,10 @@ body {
 
   .text-overview{
     padding: 4% 0;
+  }
+
+  .square{
+    bottom: -15% !important;
   }
 }
 
@@ -921,7 +929,7 @@ body {
 
 
   .about-me-photo{
-    margin-top: 8% !important;
+    margin-top: 20% !important;
   }
 
   .sub-title {

@@ -39,7 +39,7 @@
   font-size: 32px;
   font-weight: 400;
   margin-bottom: 12px;
-  color: #979388;
+  color: #ece5d3;
   text-transform: uppercase;
   line-height: 1.2;
 }
@@ -342,6 +342,7 @@
 .technologies-list {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   width: 100%;
   gap: 1%;
   margin: 2% 0;
@@ -427,8 +428,12 @@
     gap: 40%;
   }
 
+  .project-titles{
+    margin-top: 20px;
+  }
+
   .showcase-image {
-    height: 350px;
+    height: 250px;
   }
 
   .image-nav-btn {
@@ -463,7 +468,6 @@
   }
   .project-info {
     flex-direction: column;
-    justify-content: center;
   }
   .technologies {
     font-size: 14px;
@@ -495,9 +499,10 @@
   .technologies-list1 {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     width: 100%;
     gap: 1%;
-    margin: 3% 0;
+    margin: 4% 0 2%;
     user-select: none;
   }
 
