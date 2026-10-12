@@ -10,7 +10,6 @@ const About = () => {
   const [c1Position, setC1Position] = useState({ x: 0, y: 0 });
   const [c2Position, setC2Position] = useState({ x: 0, y: 0 });
   const [c3Position, setC3Position] = useState({ x: 0, y: 0 });
-  const [c4Position, setC4Position] = useState({ x: 0, y: 0 });
   const [s1Position, setS1Position] = useState({ x: 0, y: 0 });
   const [s2Position, setS2Position] = useState({ x: 0, y: 0 });
 
@@ -82,9 +81,9 @@ const About = () => {
                   avid reader of self-help and novel books
                 </span>
                 , which have helped me develop a growth mindset and a deeper
-                understanding of human behavior. Exploring new
-                technologies and experimenting with different programming
-                languages and frameworks is something I do enjoy too. I love traveling and
+                understanding of human behavior. Exploring new technologies and
+                experimenting with different programming languages and
+                frameworks is something I do enjoy too. I love traveling and
                 immersing myself in different cultures, and I have a cat named
                 "Mattia."
               </p>
@@ -120,12 +119,21 @@ const About = () => {
                 transition: "transform 0.1s ease-out",
               }}
             >
-              <p className="school">Catagtaguen NHS</p>
-              <p className="school-year">2016-2020</p>
-              <p className="award">
-                Class Salutatorian <br />
-                (JHS)
-              </p>
+              <div className="card-heading">
+                <p className="school">Catagtaguen NHS</p>
+                <p className="school-year">2016-2020</p>
+              </div>
+              <p className="school-label">Junior High School</p>
+
+              <div className="school-line"></div>
+
+              <div className="awards">
+                <p className="awards-sub-title">Notable Awards:</p>
+                <p className="award"><span className="number-highlight">(1)</span> Class Salutatorian</p>
+                <p className="award"><span className="number-highlight">(2)</span> Best in Performing Arts, English, and Social Science</p>
+                <p className="award"><span className="number-highlight">(3)</span> Junior High School President (2019-2020)</p>
+              
+              </div>
             </div>
             <div
               className="card block"
@@ -138,25 +146,23 @@ const About = () => {
                 transition: "transform 0.1s ease-out",
               }}
             >
-              <p className="school">STI College Laoag</p>
-              <p className="school-year">2020-2022</p>
-              <p className="award">Class Salutatorian (SHS)</p>
+              <div className="card-heading">
+                <p className="school">STI College of Laoag</p>
+                <p className="school-year">2020-2022</p>
+              </div>
+              <p className="school-label">Senior High School | MAWD Track</p>
+
+              <div className="school-line"></div>
+
+              <div className="awards">
+                <p className="awards-sub-title">Notable Awards:</p>
+                <p className="award"><span className="number-highlight">(1)</span> Class Salutatorian</p>
+                <p className="award"><span className="number-highlight">(2)</span> Best in Innovation for STI Expo Awardee (2022)</p>
+                <p className="award"><span className="number-highlight">(3)</span> SSG President (2020-2022)</p>
+              
+              </div>
             </div>
-            <div
-              className="card block"
-              onMouseMove={(e) => handleMouseMove(e, setC4Position)}
-              onMouseLeave={() => handleMouseLeave(setC4Position)}
-              style={{
-                transform: `translate(${c4Position.x * 0.1}px, ${
-                  c4Position.y * 0.1
-                }px)`,
-                transition: "transform 0.1s ease-out",
-              }}
-            >
-              <p className="school">DataCamp</p>
-              <p className="school-year">2024-2025</p>
-              <p className="award">Data Science Student</p>
-            </div>
+
             <div
               className="card block"
               onMouseMove={(e) => handleMouseMove(e, setC3Position)}
@@ -168,9 +174,21 @@ const About = () => {
                 transition: "transform 0.1s ease-out",
               }}
             >
-              <p className="school">CIIT</p>
-              <p className="school-year">2022-Present</p>
-              <p className="award">Computer Science Student</p>
+              <div className="card-heading">
+                <p className="school">CIIT</p>
+                <p className="school-year">2022-Present</p>
+              </div>
+              <p className="school-label">Bachelor of Science in Computer Science</p>
+
+              <div className="school-line"></div>
+
+              <div className="awards">
+                <p className="awards-sub-title">Notable Awards:</p>
+                <p className="award"><span className="number-highlight">(1)</span> Gold and Silver Weave Awardee</p>
+                <p className="award"><span className="number-highlight">(2)</span> Dean's List, 8 Semesters</p>
+                <p className="award"><span className="number-highlight">(3)</span> Best in Project for Machine Learning, Data Mining, and Algorithms and Complexity</p>
+              
+              </div>
             </div>
           </div>
           <div className="educ-extra">
