@@ -784,6 +784,7 @@ body {
 
   .about-me-photo {
     justify-content: center;
+    margin-top: 5%;
   }
 
   .about-me-info {
@@ -800,11 +801,13 @@ body {
   }
 
   .square {
+    display: flex;
     width: 150px;
     height: 150px;
     align-content: center;
-    bottom: 55%;
-    left: 51%;
+    justify-content: center;
+    bottom: 67% !important;
+    left: 50%;
   }
 
   .school {
