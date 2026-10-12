@@ -85,7 +85,7 @@ const About = () => {
                 experimenting with different programming languages and
                 frameworks is something I do enjoy too. I love traveling and
                 immersing myself in different cultures, and I have a cat named
-                "Mattia."
+                'Mattia,' which means "Gift of God" in Italian.
               </p>
             </div>
           </div>
