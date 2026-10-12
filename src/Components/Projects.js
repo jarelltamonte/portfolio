@@ -1,9 +1,9 @@
-import React, { useEffect, useState, useCallback } from "react";
+import React, { useEffect, useState, useCallback, useMemo, useRef } from "react";
 import { items } from "./projectsData";
 import { useNavigate } from "react-router-dom";
 import "../Style/Projects.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGlobe } from "@fortawesome/free-solid-svg-icons";
+import { faGlobe, faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
 const Projects = () => {
   const [selectedFilters, setSelectedFilters] = useState([]);
@@ -11,9 +11,20 @@ const Projects = () => {
   const [hoveredItem, setHoveredItem] = useState(null);
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [filPosition, setFilPosition] = useState({ x: 0, y: 0 });
+  const [sortBy, setSortBy] = useState("default");
+  const [sortOpen, setSortOpen] = useState(false);
+  const sortRef = useRef(null);
   const navigate = useNavigate();
 
   const filters = ["Website", "Web App", "Mobile App", "Machine Learning"];
+
+  const sortOptions = [
+    { value: "default", label: "Default" },
+    { value: "az", label: "Title: A → Z" },
+    { value: "za", label: "Title: Z → A" },
+    { value: "newest", label: "Date: Newest first" },
+    { value: "oldest", label: "Date: Oldest first" },
+  ];
 
   const filterItems = useCallback(() => {
     if (selectedFilters.length > 0) {
@@ -35,6 +46,32 @@ const Projects = () => {
   useEffect(() => {
     document.title = "Works - Jarell Tamonte";
   }, []);
+
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (sortRef.current && !sortRef.current.contains(e.target)) {
+        setSortOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  const sortedItems = useMemo(() => {
+    const list = [...filteredItems];
+    switch (sortBy) {
+      case "az":
+        return list.sort((a, b) => a.title.localeCompare(b.title));
+      case "za":
+        return list.sort((a, b) => b.title.localeCompare(a.title));
+      case "newest":
+        return list.sort((a, b) => Number(b.year) - Number(a.year));
+      case "oldest":
+        return list.sort((a, b) => Number(a.year) - Number(b.year));
+      default:
+        return list;
+    }
+  }, [filteredItems, sortBy]);
 
   const handleFilterButtonClick = (selectedCategory) => {
     if (selectedFilters.includes(selectedCategory)) {
@@ -96,10 +133,42 @@ const Projects = () => {
         ))}
       </div>
 
+      <div className="sort-container" ref={sortRef}>
+        <button
+          className="sort-button"
+          onClick={() => setSortOpen((prev) => !prev)}
+        >
+          Sort by: {sortOptions.find((o) => o.value === sortBy).label}
+          <FontAwesomeIcon
+            icon={faChevronDown}
+            className={`sort-chevron ${sortOpen ? "open" : ""}`}
+          />
+        </button>
+
+        {sortOpen && (
+          <ul className="sort-menu">
+            {sortOptions.map((option) => (
+              <li
+                key={option.value}
+                className={`sort-option ${
+                  sortBy === option.value ? "sort-option-active" : ""
+                }`}
+                onClick={() => {
+                  setSortBy(option.value);
+                  setSortOpen(false);
+                }}
+              >
+                {option.label}
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
+
       <div className="items-container">
-        {filteredItems.map((item, idx) => (
+        {sortedItems.map((item, idx) => (
           <div
-            key={idx}
+            key={item.id ?? idx}
             className="item"
             onMouseMove={(e) => handleMouseMove(e, item)}
             onMouseLeave={handleMouseLeave}
