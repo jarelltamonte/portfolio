@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.d85365cf.css",
-    "main.js": "/portfolio/static/js/main.fd2d350d.js",
+    "main.css": "/portfolio/static/css/main.93ae5725.css",
+    "main.js": "/portfolio/static/js/main.031106fc.js",
     "static/js/453.1226ac89.chunk.js": "/portfolio/static/js/453.1226ac89.chunk.js",
     "static/media/hotel3.png": "/portfolio/static/media/hotel3.78a81fd4ea7aed9ebdb1.png",
     "static/media/rizal3.png": "/portfolio/static/media/rizal3.f30383f5348b02d31eda.png",
@@ -82,12 +82,12 @@
     "index.html": "/portfolio/index.html",
     "static/media/slick.ttf": "/portfolio/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/portfolio/static/media/slick.295183786cd8a1389865.woff",
-    "main.d85365cf.css.map": "/portfolio/static/css/main.d85365cf.css.map",
-    "main.fd2d350d.js.map": "/portfolio/static/js/main.fd2d350d.js.map",
+    "main.93ae5725.css.map": "/portfolio/static/css/main.93ae5725.css.map",
+    "main.031106fc.js.map": "/portfolio/static/js/main.031106fc.js.map",
     "453.1226ac89.chunk.js.map": "/portfolio/static/js/453.1226ac89.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d85365cf.css",
-    "static/js/main.fd2d350d.js"
+    "static/css/main.93ae5725.css",
+    "static/js/main.031106fc.js"
   ]
 }
