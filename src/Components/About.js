@@ -29,7 +29,7 @@ const schools = [
     label: "Bachelor of Science in Computer Science",
     story: [
       "My undergraduate journey has been a rollercoaster. As a consistent honor student in my previous years, receiving a grade of 85 in my freshman year which disqualified me from graduating with Latin honors was beyond devastating. It took a toll on my mental health and led me to transfer schools for a semester before eventually returning to CIIT for its curriculum and learning environment. However, the experience taught me that there is more to life than academics.",
-      "Despite the setbacks, I continued to challenge myself. I received the Gold Weave distinction for ranking in the top 1-10 and the Silver Weave distinction for ranking 11th to 20th among thousands of students. I also made the Dean’s List for eight semesters, received Best in Project awards for three courses, and won campus competitions. Now in my final year, I’m working on my thesis. Stay tuned for what comes next!",
+      "Despite the setbacks, I continued to challenge myself. I received the Gold Weave distinction for ranking in the top 1-10 this year and the Silver Weave distinction for ranking 11th to 20th in 2023 among thousands of students. I made the Dean’s List for eight semesters, received Best in Project awards for three courses, and won campus competitions. Now in my final year, I’m working on my thesis. Stay tuned for what comes next!",
     ],
   },
 ];
