@@ -10,8 +10,8 @@ const schools = [
     year: "2016-2020",
     label: "Junior High School",
     story: [
-      "Write the first paragraph of your Junior High School story here.",
-      "Write the second paragraph here, such as what you learned or who shaped you.",
+      "When I entered Junior High School, I wasn’t part of the top five as I was still adjusting to a new environment and meeting people from different primary schools. As a consistent honor student in primary school, I carried a competitive spirit into high school by joining clubs, extracurricular activities, and competitions, including speech, journalism, biology, and band contests, where I played the piano. I also participated in volleyball, table tennis, and badminton.",
+      "Throughout Junior High School, I was nominated around ten times for president positions in different course clubs. In my final year, I was elected Mayor of the entire Junior High School, which led me to lead the school year's ball. I graduated as Class Salutatorian and received a Leadership Award, along with distinctions in Performing Arts, Communication Arts in English, Social Science, and Edukasyon sa Pagpapakatao.",
     ],
   },
   {
@@ -19,8 +19,8 @@ const schools = [
     year: "2020-2022",
     label: "Senior High School | MAWD Track",
     story: [
-      "Write the first paragraph of your Senior High School story here.",
-      "Write the second paragraph here, such as projects you built or roles you took on.",
+      "My Senior High School years took place during the pandemic, which meant adjusting to online learning despite unstable internet connections, distractions at home, and limited access to instructors. I took the Mobile App and Web Development track, which deepened my appreciation for technology. For my thesis, I developed an Android tour guide app for travelers in Ilocos Norte, which received an award for innovation.",
+      "I also took on leadership roles in team activities and clubs, eventually being elected SSG President for the entire school for the 2021–2022 academic year. Working with faculty members and fellow officers to support students and organize school events was challenging, but rewarding at the same time. I was a consistent Honor Student, and graduated as the Class Salutatorian.",
     ],
   },
   {
@@ -28,8 +28,8 @@ const schools = [
     year: "2022-Present",
     label: "Bachelor of Science in Computer Science",
     story: [
-      "Write the first paragraph of your college story here.",
-      "Write the second paragraph here, such as your projects, internships, or certifications.",
+      "My undergraduate journey has been a rollercoaster. As a consistent honor student, receiving a grade of 85 in my freshman year that disqualified me from graduating with Latin honors was beyond devastating. It took a toll on my mental health and led me to transfer schools for a semester before eventually returning to CIIT for its curriculum and learning environment. However, the experience taught me that there is more to life than academics.",
+      "Despite the setbacks, I continued to challenge myself. I received the Gold Weave distinction for ranking in the top 1-10 and the Silver Weave distinction for ranking 11th to 20th among thousands of students. I also made the Dean’s List for eight semesters, received Best in Project awards for three courses, and won campus competitions. Now in my final year, I’m working on my thesis. Stay tuned for what comes next!",
     ],
   },
 ];
@@ -355,7 +355,6 @@ const About = () => {
             <div className="school-line"></div>
 
             <div className="modal-story">
-              <p className="awards-sub-title">My Story:</p>
               {selectedSchool.story.map((paragraph, index) => (
                 <p className="modal-story-text" key={index}>
                   {paragraph}

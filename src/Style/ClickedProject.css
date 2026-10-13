@@ -350,16 +350,15 @@
 }
 
 .technologies {
-  font-size: 14px;
-  border-radius: 14px;
-  padding: 1%;
-  background-color: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(8px);
-  box-shadow: 3px 3px 3px rgb(0, 0, 0, 0.25);
-  border-top: 1px solid rgba(255, 255, 255, 0.3);
-  border-left: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 12px;
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  font-weight: 300;
   color: #ece5d3;
+  background-color: #1f1f1e;
+  border-top: 1px solid #75756b;
+  border-left: 1px solid #75756b;
+  border-radius: 8px;
+  padding: 6px 10px;
 }
 
 .technologies-list1,
