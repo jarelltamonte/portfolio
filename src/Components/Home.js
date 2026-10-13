@@ -176,10 +176,11 @@ const Home = () => {
                   Jarell Tamonté
                 </p>
                 <p className="brief-info">
+                  I like working with projects where the analysis ends up in
+                  something people can actually use.{" "}
                   <span className="b-text">I build things with data and code</span>. Models that answer
                   practical questions and web and mobile apps that put them in
-                  people’s hands. I like working with projects where the analysis ends up in
-                  something people can actually use.
+                  people’s hands. 
                 </p>
                 <button
                   type="button"
