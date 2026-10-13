@@ -1,4 +1,5 @@
 import me from "../images/pinkme.jpg";
+import { certificatesData } from "./certificatesData";
 
 import "../Style/About.css";
 import { useState, useEffect } from "react";
@@ -42,6 +43,7 @@ const About = () => {
   const [s1Position, setS1Position] = useState({ x: 0, y: 0 });
   const [s2Position, setS2Position] = useState({ x: 0, y: 0 });
   const [selectedSchool, setSelectedSchool] = useState(null);
+  const [selectedCert, setSelectedCert] = useState(null);
 
   const handleMouseMove = (e, setPosition) => {
     const rect = e.target.getBoundingClientRect();
@@ -62,15 +64,25 @@ const About = () => {
     }
   };
 
+  const handleCertKeyDown = (e, cert) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      setSelectedCert(cert);
+    }
+  };
+
   useEffect(() => {
     document.title = "About - Jarell Tamonte";
   }, []);
 
   useEffect(() => {
-    if (!selectedSchool) return;
+    if (!selectedSchool && !selectedCert) return;
 
     const handleKeyDown = (e) => {
-      if (e.key === "Escape") setSelectedSchool(null);
+      if (e.key === "Escape") {
+        setSelectedSchool(null);
+        setSelectedCert(null);
+      }
     };
 
     const previousOverflow = document.body.style.overflow;
@@ -81,7 +93,7 @@ const About = () => {
       document.body.style.overflow = previousOverflow;
       window.removeEventListener("keydown", handleKeyDown);
     };
-  }, [selectedSchool]);
+  }, [selectedSchool, selectedCert]);
 
   return (
     <>
@@ -108,8 +120,8 @@ const About = () => {
               <p className="about-text">More of me...</p>
               <div className="line"></div>
               <p className="about-me-detail">
-                I have always been fascinated by the ever-evolving world of technology
-                since childhood, even though{" "}
+                I have always been fascinated by the ever-evolving world of
+                technology since childhood, even though{" "}
                 <span className="highlight">
                   Computer Science wasn't my initial choice for a college major
                 </span>
@@ -186,9 +198,18 @@ const About = () => {
               <div className="school-line"></div>
 
               <div className="awards">
-                <p className="award"><span className="number-highlight">(1)</span> Class Salutatorian</p>
-                <p className="award"><span className="number-highlight">(2)</span> Best in Performing Arts, English, and Social Science</p>
-                <p className="award"><span className="number-highlight">(3)</span> Junior High School President (2019-2020)</p>
+                <p className="award">
+                  <span className="number-highlight">(1)</span> Class
+                  Salutatorian
+                </p>
+                <p className="award">
+                  <span className="number-highlight">(2)</span> Best in
+                  Performing Arts, English, and Social Science
+                </p>
+                <p className="award">
+                  <span className="number-highlight">(3)</span> Junior High
+                  School President (2019-2020)
+                </p>
               </div>
             </div>
             <div
@@ -215,9 +236,18 @@ const About = () => {
               <div className="school-line"></div>
 
               <div className="awards">
-                <p className="award"><span className="number-highlight">(1)</span> Class Salutatorian</p>
-                <p className="award"><span className="number-highlight">(2)</span> Best in Innovation for STI Expo Awardee (2022)</p>
-                <p className="award"><span className="number-highlight">(3)</span> SSG President (2020-2022)</p>
+                <p className="award">
+                  <span className="number-highlight">(1)</span> Class
+                  Salutatorian
+                </p>
+                <p className="award">
+                  <span className="number-highlight">(2)</span> Best in
+                  Innovation for STI Expo Awardee (2022)
+                </p>
+                <p className="award">
+                  <span className="number-highlight">(3)</span> SSG President
+                  (2020-2022)
+                </p>
               </div>
             </div>
 
@@ -240,14 +270,26 @@ const About = () => {
                 <p className="school">CIIT</p>
                 <p className="school-year">2022-Present</p>
               </div>
-              <p className="school-label">Bachelor of Science in Computer Science</p>
+              <p className="school-label">
+                Bachelor of Science in Computer Science
+              </p>
 
               <div className="school-line"></div>
 
               <div className="awards">
-                <p className="award"><span className="number-highlight">(1)</span> Gold and Silver Weave Awardee</p>
-                <p className="award"><span className="number-highlight">(2)</span> Dean's List, 8 Semesters</p>
-                <p className="award"><span className="number-highlight">(3)</span> Best in Project for Machine Learning, Data Mining, and Algorithms and Complexity</p>
+                <p className="award">
+                  <span className="number-highlight">(1)</span> Gold and Silver
+                  Weave Awardee
+                </p>
+                <p className="award">
+                  <span className="number-highlight">(2)</span> Dean's List, 8
+                  Semesters
+                </p>
+                <p className="award">
+                  <span className="number-highlight">(3)</span> Best in Project
+                  for Machine Learning, Data Mining, and Algorithms and
+                  Complexity
+                </p>
               </div>
             </div>
           </div>
@@ -258,13 +300,37 @@ const About = () => {
               certifications from various academic institutions.
             </p>
           </div>
+          <div className="cert-grid">
+            {certificatesData.map((cert) => (
+              <div
+                className="card block cert-card"
+                key={cert.id}
+                role="button"
+                tabIndex={0}
+                onClick={() => setSelectedCert(cert)}
+                onKeyDown={(e) => handleCertKeyDown(e, cert)}
+              >
+                <div className="cert-preview">
+                  <iframe
+                    className="cert-frame"
+                    style={{ aspectRatio: cert.ratio || "1.74 / 1" }}
+                    src={`${cert.pdf}#toolbar=0&navpanes=0&scrollbar=0&view=FitH`}
+                    title={cert.title}
+                    tabIndex={-1}
+                    loading="lazy"
+                  />
+                </div>
+                <div className="card-heading cert-meta">
+                  <p className="school">{cert.title}</p>
+                  <p className="school-year">{cert.year}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
       {selectedSchool && (
-        <div
-          className="modal-overlay"
-          onClick={() => setSelectedSchool(null)}
-        >
+        <div className="modal-overlay" onClick={() => setSelectedSchool(null)}>
           <div
             className="modal-card"
             role="dialog"
@@ -296,6 +362,53 @@ const About = () => {
                 </p>
               ))}
             </div>
+          </div>
+        </div>
+      )}
+      {selectedCert && (
+        <div className="modal-overlay" onClick={() => setSelectedCert(null)}>
+          <div
+            className="modal-card cert-modal"
+            role="dialog"
+            aria-modal="true"
+            aria-label={selectedCert.title}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              type="button"
+              className="modal-close"
+              aria-label="Close"
+              onClick={() => setSelectedCert(null)}
+            >
+              ×
+            </button>
+            <div className="card-heading">
+              <p className="school">{selectedCert.title}</p>
+              <p className="school-year">{selectedCert.year}</p>
+            </div>
+            <p className="school-label">{selectedCert.institution}</p>
+
+            <div className="school-line"></div>
+
+            <div className="cert-skills">
+              {selectedCert.skills.map((skill) => (
+                <span className="cert-skill" key={skill}>
+                  {skill}
+                </span>
+              ))}
+            </div>
+
+            <object
+              className="cert-pdf"
+              style={{ aspectRatio: selectedCert.ratio || "1.74 / 1" }}
+              data={`${selectedCert.pdf}#toolbar=0&navpanes=0&scrollbar=0&view=Fit`}
+              type="application/pdf"
+              aria-label={selectedCert.title}
+            >
+              <a href={selectedCert.pdf} target="_blank" rel="noreferrer">
+                Open certificate
+              </a>
+            </object>
           </div>
         </div>
       )}

@@ -225,7 +225,7 @@ body {
 .school-label{
   font-family: "Inter", sans-serif;
   font-size: 14px;
-  color: #ece5d3;
+  color: #ffffff;
   font-weight: 200;
   margin-top: 4px;
 }
@@ -237,6 +237,13 @@ body {
   margin: 16px 0;
 }
 
+.awards-sub-title{
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  color: #ece5d3;
+  font-weight: 200;
+  margin-bottom: 10px;
+}
 
 .number-highlight{
   font-family: "Inter", sans-serif;
@@ -246,30 +253,6 @@ body {
   margin-right: 4px;
 }
 
-.card-line {
-  position: absolute;
-  top: 80%;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background-color: #1f1f1e;
-  z-index: 0;
-  overflow: hidden;
-}
-
-.card-line::before {
-  content: "";
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(236, 229, 211, 0.8),
-    transparent
-  );
-  animation: glow 3s infinite;
-}
 
 .about-third-section {
   width: 100%;
@@ -329,7 +312,6 @@ body {
   align-items: center;
   width: 100%;
   gap: 10px;
-  justify-content: flex-end;
 }
 
 .educ-extra-line {
@@ -346,6 +328,99 @@ body {
   max-width: 400px;
   line-height: 1.2;
   overflow-wrap: break-word;
+}
+
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 32px;
+  width: 100%;
+}
+
+.cert-grid .cert-card {
+  width: 100%;
+  padding: 12px;
+}
+
+.cert-preview {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 6px;
+  background-color: #1f1f1e;
+}
+
+.cert-frame {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: auto;
+  transform: translateY(-50%);
+  border: none;
+  pointer-events: none;
+}
+
+.cert-meta  {
+  align-items: center;
+  margin-top: 12px;
+}
+
+.cert-meta .school {
+  flex: 1;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.4;
+}
+
+.cert-meta .school-year {
+  flex-shrink: 0;
+}
+
+.cert-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.cert-skill {
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  color: #ece5d3;
+  background-color: #1f1f1e;
+  border-top: 1px solid #75756b;
+  border-left: 1px solid #75756b;
+  border-radius: 8px;
+  padding: 6px 10px;
+}
+
+.cert-modal {
+  max-width: 720px;
+}
+
+.cert-pdf {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1.74 / 1;
+  margin-top: 20px;
+  border: none;
+  border-radius: 6px;
+  background-color: #1f1f1e;
+}
+
+.cert-pdf a {
+  display: inline-block;
+  padding: 16px;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: #ece5d3;
+  text-decoration: underline;
 }
 
 .skills-overview {
@@ -974,6 +1049,10 @@ body {
   .card-line {
     top: 65%;
   }
+
+  .cert-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 460px) {
@@ -1055,6 +1134,8 @@ body {
   .modal-card {
     padding: 20px;
   }
+
+
 }
 
 @media (prefers-reduced-motion: reduce) {
