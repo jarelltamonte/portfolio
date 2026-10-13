@@ -23,7 +23,7 @@ export const certificatesData = [
   {
     id: 2,
     title: "Associate Data Analyst",
-    skills: ["Data Analysis", "Exploratory Data Analysis", "Data Manipulation", "Data Cleaning", "Statistics"],
+    skills: ["Data Analysis", "Exploratory Data Analysis", "Data Manipulation", "Data Cleaning", "Statistics", "Data Transformation"],
     institution: "DataCamp",
     pdf: dataanalyst,
     year: 2026,
@@ -32,7 +32,7 @@ export const certificatesData = [
   {
     id: 3,
     title: "Python Data Associate",
-    skills: ["Data Analysis", "Exploratory Data Analysis", "Data Manipulation", "Data Cleaning"],
+    skills: ["Data Analysis", "Exploratory Data Analysis", "Data Manipulation", "Data Cleaning", "Data Transformation"],
     institution: "DataCamp",
     pdf: python,
     year: 2026,
@@ -41,7 +41,7 @@ export const certificatesData = [
   {
     id: 4,
     title: "SQL Associate",
-    skills: ["Window Functions", "Joins", "Common Table Expressions (CTEs), Subquery"],
+    skills: ["Window Functions", "Joins", "Common Table Expressions (CTEs)", "Subquery"],
     institution: "DataCamp",
     pdf: sql,
     year: 2026,
@@ -50,7 +50,7 @@ export const certificatesData = [
   {
     id: 5,
     title: "Power BI",
-    skills: ["Data Visualization", "Business Intelligence", "Data Analysis"],
+    skills: ["Data Visualization", "Business Intelligence", "Data Analysis", "Power Query", "Data Transformation"],
     institution: "DataCamp",
     pdf: powerbi,
     year: 2026,
@@ -77,7 +77,7 @@ export const certificatesData = [
   {
     id: 8,
     title: "User Experience Design Fundamentals",
-    skills: ["User-centered Design", "User Interface Design", "UX Research", "User Research"],
+    skills: ["User-centered Design", "User Interface Design", "UX Research", "User Research", "UX Writing"],
     institution: "IBM",
     pdf: ui,
     year: 2026,
