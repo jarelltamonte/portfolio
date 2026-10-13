@@ -186,7 +186,6 @@ const About = () => {
               <div className="school-line"></div>
 
               <div className="awards">
-                <p className="awards-sub-title">Notable Awards:</p>
                 <p className="award"><span className="number-highlight">(1)</span> Class Salutatorian</p>
                 <p className="award"><span className="number-highlight">(2)</span> Best in Performing Arts, English, and Social Science</p>
                 <p className="award"><span className="number-highlight">(3)</span> Junior High School President (2019-2020)</p>
@@ -216,7 +215,6 @@ const About = () => {
               <div className="school-line"></div>
 
               <div className="awards">
-                <p className="awards-sub-title">Notable Awards:</p>
                 <p className="award"><span className="number-highlight">(1)</span> Class Salutatorian</p>
                 <p className="award"><span className="number-highlight">(2)</span> Best in Innovation for STI Expo Awardee (2022)</p>
                 <p className="award"><span className="number-highlight">(3)</span> SSG President (2020-2022)</p>
@@ -247,7 +245,6 @@ const About = () => {
               <div className="school-line"></div>
 
               <div className="awards">
-                <p className="awards-sub-title">Notable Awards:</p>
                 <p className="award"><span className="number-highlight">(1)</span> Gold and Silver Weave Awardee</p>
                 <p className="award"><span className="number-highlight">(2)</span> Dean's List, 8 Semesters</p>
                 <p className="award"><span className="number-highlight">(3)</span> Best in Project for Machine Learning, Data Mining, and Algorithms and Complexity</p>

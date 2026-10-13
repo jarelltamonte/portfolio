@@ -237,13 +237,6 @@ body {
   margin: 16px 0;
 }
 
-.awards-sub-title{
-  font-family: "Inter", sans-serif;
-  font-size: 14px;
-  color: #ece5d3;
-  font-weight: 200;
-  margin-bottom: 10px;
-}
 
 .number-highlight{
   font-family: "Inter", sans-serif;
@@ -307,7 +300,7 @@ body {
   font-weight: 300;
   text-align: center;
   word-wrap: break-word;
-  color: #ece5d3;
+  color: #ffffff;
   margin-top: 4px;
 }
 
@@ -704,15 +697,16 @@ body {
   overflow-y: auto;
   display: flex;
   flex-direction: column;
-  padding: 28px;
+  padding: 32px 28px 28px 28px;
   border-radius: 10px;
   box-shadow: 3px 3px 3px #00000040;
   animation: modal-in 0.25s ease-out both;
 }
 
 .modal-card .card-heading {
-  padding-right: 28px;
+  padding-right: 0;
 }
+
 
 .modal-close {
   position: absolute;
@@ -738,7 +732,7 @@ body {
   font-size: 14px;
   font-weight: 300;
   line-height: 1.5;
-  color: #ece5d3;
+  color: #ffffff;
   text-align: justify;
   word-wrap: break-word;
   margin-bottom: 12px;
@@ -920,9 +914,7 @@ body {
     align-items: center;
   }
 
-  .second-section{
-    height: fit-content; 
-  }
+
 
   .tech-icons{
     gap: 2px;

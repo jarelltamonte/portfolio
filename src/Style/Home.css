@@ -280,7 +280,7 @@ span.typed-cursor {
 
 .second-section {
   background-color: #1f1f1e;
-  padding: 3% 8%;
+  padding: 4% 8% 3%;
   /* margin-left: 8%;
   box-shadow: 12px 12px 12px rgb(64 62 62 / 70%); */
   height: 40vh;
@@ -708,7 +708,21 @@ span.typed-cursor {
   }
 }
 
-@media (max-width: 630px) {
+@media (max-width: 660px) {
+  .about-content{
+    flex-direction: column;
+    gap: 10%;
+  }
+
+  .vertical-line{
+    width: 100px;
+    height: 1px;
+  }
+
+  .downloadButton, .workButton {
+    z-index: 2;
+  }
+
   .small-pic {
     display: block;
   }
@@ -743,8 +757,13 @@ span.typed-cursor {
     right: -20%;
   }
 
-  .second-section {
-    padding: 15% 8%;
+  .second-section { 
+    padding: 0 8% 16%;
+    min-height: 50vh;
+  }
+
+  .arrow-container{
+    display: none;
   }
 }
 
