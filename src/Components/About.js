@@ -10,7 +10,7 @@ const schools = [
     year: "2016-2020",
     label: "Junior High School",
     story: [
-      "When I entered Junior High School, I wasn’t part of the top five as I was still adjusting to a new environment and meeting people from different primary schools. As a consistent honor student in primary school, I carried a competitive spirit into high school by joining clubs, extracurricular activities, and competitions, including speech, journalism, biology, and band contests, where I played the piano. I also participated in volleyball, table tennis, and badminton.",
+      "My first year of Junior High School didn’t start the way I expected. For the first time, I found myself outside the top five, surrounded by unfamiliar faces from different primary schools. I had to find my footing in a new environment before I could figure out where I stood. As a consistent honor student in primary school, I carried a competitive spirit into high school by joining clubs, extracurricular activities, and competitions, including speech, journalism, biology, and band contests, where I played the piano. I also participated in volleyball, table tennis, and badminton.",
       "Throughout Junior High School, I was nominated around ten times for president positions in different course clubs. In my final year, I was elected Mayor of the entire Junior High School, which led me to lead the school year's ball. I graduated as Class Salutatorian and received a Leadership Award, along with distinctions in Performing Arts, Communication Arts in English, Social Science, and Edukasyon sa Pagpapakatao.",
     ],
   },
