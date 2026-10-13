@@ -44,7 +44,6 @@ body {
 .about-profile-pic {
   width: 375px;
   height: 390px;
-  /* border-radius: 20px; */
   object-fit: cover;
   object-position: bottom; 
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -175,11 +174,6 @@ body {
   background-color: #2a2a2a;
   color: #ece5d3;
   box-shadow: 3px 3px 3px #00000040;
-  /* background-color: rgba(255, 255, 255, 0.050); 
-    backdrop-filter: blur(8px);
-    box-shadow: 3px 3px 3px #00000040;
-    border-top: 1px solid rgba(255, 255, 255, 0.3);
-    border-left: 1px solid rgba(255, 255, 255, 0.3); */
   border-radius: 8px;
   padding: 1% 1%;
   display: inline-block;
@@ -207,12 +201,18 @@ body {
   position: relative;
   transition: box-shadow 0.3s ease-in-out, transform 0.8s ease-in-out;
   box-shadow: 3px 3px 3px #00000040;
+  cursor: pointer;
 }
 
 .card:hover {
   box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.8);
   user-select: none;
   transform: scale(1.02);
+}
+
+.card:focus-visible {
+  outline: 1px solid #ece5d3;
+  outline-offset: 4px;
 }
 
 .card-heading{
@@ -681,6 +681,69 @@ body {
   border-top-color: rgba(151, 147, 136, 1);
 }
 
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
+  animation: modal-fade 0.25s ease-out both;
+}
+
+.modal-card {
+  position: relative;
+  background-color: #2a2a2a;
+  color: white;
+  width: 100%;
+  max-width: 480px;
+  max-height: 85vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 28px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 3px #00000040;
+  animation: modal-in 0.25s ease-out both;
+}
+
+.modal-card .card-heading {
+  padding-right: 28px;
+}
+
+.modal-close {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  background: none;
+  border: none;
+  color: #ece5d3;
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
+  font-weight: 200;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.modal-close:focus-visible {
+  outline: 1px solid #ece5d3;
+  outline-offset: 2px;
+}
+
+.modal-story-text {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.5;
+  color: #ece5d3;
+  text-align: justify;
+  word-wrap: break-word;
+  margin-bottom: 12px;
+}
+
 @media (max-width: 1250px) {
   .size-lg {
     font-size: 22px;
@@ -996,6 +1059,17 @@ body {
   .educ-extra-line{
     height: 32px;
   }
+
+  .modal-card {
+    padding: 20px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .modal-overlay,
+  .modal-card {
+    animation: none;
+  }
 }
 
 @keyframes glow {
@@ -1055,5 +1129,25 @@ body {
     transform: scale(1);
     opacity: 0.8;
     text-shadow: none;
+  }
+}
+
+@keyframes modal-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modal-in {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
 }

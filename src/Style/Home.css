@@ -1,6 +1,7 @@
 .first-section {
   background-color: #1f1f1e;
-  overflow: hidden;
+  overflow-x: clip;
+  overflow-y: visible;
   position: relative;
   display: flex;
   align-items: center;
@@ -91,7 +92,7 @@
 .a-text{
   font-weight: 700;
   font-family: "Inter", sans-serif;
-  color: 1f1f1e;
+  color: #1f1f1e;
 }
 
 .downloadButton {
@@ -192,6 +193,7 @@ a.more-work {
   width: 70%;
   height: 70%;
   margin: 0;
+  z-index: 10;
   overflow: hidden;
 }
 
@@ -215,21 +217,23 @@ span.typed-cursor {
   font-weight: 300;
 }
 
-.skill-1 {
-  top: 5%;
-  right: 0;
-  display: none;
+.arrow-container{
+  display: flex;
+  justify-content: end;
+  margin-bottom: 5%;
 }
-.skill-2 {
-  top: 20%;
-  left: 0;
-  display: none;
+
+.arrow-down-left {
+  color: #1f1f1e;
+  font-size: 45px;
+  transition: transform 0.3s ease;
 }
-.skill-3 {
-  bottom: 10%;
-  left: 0;
-  display: none;
+
+.arrow-down-left:hover {
+  color: #ece5d3;
+  transform: rotate(10deg);
 }
+
 .skill-4 {
   bottom: 20%;
   right: 0;
@@ -243,7 +247,7 @@ span.typed-cursor {
   height: 600px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
-  z-index: 0;
+  z-index: 1;
   overflow: hidden;
   transition: transform 0.3s ease-out;
   transform: translate(-50%, -50%);
@@ -275,15 +279,18 @@ span.typed-cursor {
 }
 
 .second-section {
-  background-color: #979388;
-  padding: 8% 8%;
+  background-color: #1f1f1e;
+  padding: 3% 8%;
   /* margin-left: 8%;
   box-shadow: 12px 12px 12px rgb(64 62 62 / 70%); */
   height: 40vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
+
+
 
 .show-cont {
   animation: autoShow both;
@@ -303,7 +310,7 @@ span.typed-cursor {
 .circle-about {
   width: 150px;
   height: 150px;
-  background-color: #1f1f1e;
+  background-color: #979287;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -345,7 +352,7 @@ span.typed-cursor {
 
 .about-circle-text:before {
   content: "About Me";
-  color: #ece5d3;
+  color: #1f1f1e;
   transition: color 1.5s ease-out, content 2s ease-out;
 }
 
@@ -357,7 +364,7 @@ span.typed-cursor {
 .vertical-line {
   width: 1px;
   height: 100px;
-  background-color: #1f1f1e;
+  background-color: #ece5d3;
   margin: 0 8%;
 }
 
@@ -382,6 +389,26 @@ span.typed-cursor {
 .scroll-trigger-container {
   position: relative;
   z-index: 1;
+}
+
+.arrow-container {
+  position: absolute;
+  bottom: 0;
+  right: 8%;
+  display: flex;
+  justify-content: end;
+  margin-bottom: 0;
+}
+
+.arrow-down-left {
+  color: #979388;
+  font-size: 45px;
+  transition: transform 0.3s ease;
+}
+
+.arrow-down-left:hover {
+  color: #ece5d3;
+  transform: rotate(10deg);
 }
 
 .third-section {

@@ -3,6 +3,7 @@ import me from "../images/Jarell Tamonte.jpg";
 import { useEffect, useRef, useState } from "react";
 import Typed from "typed.js";
 import { BsBoxArrowUpRight } from "react-icons/bs";
+import { GoArrowDownLeft } from "react-icons/go";
 import { Link } from "react-router-dom";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -175,12 +176,10 @@ const Home = () => {
                   Jarell Tamonté
                 </p>
                 <p className="brief-info">
-                  An aspring <span className="b-text">Data Scientist</span> and
-                  Software Developer with a passion for creating innovative
-                  solutions. I specialize in turning raw data into models and
-                  findings that answer practical questions. My goal is to
-                  leverage technology to solve real-world problems and make a
-                  positive impact on society.
+                  <span className="b-text">I build things with data and code</span>. Models that answer
+                  practical questions and web and mobile apps that put them in
+                  people’s hands. I like working with projects where the analysis ends up in
+                  something people can actually use.
                 </p>
                 <button
                   type="button"
@@ -238,19 +237,26 @@ const Home = () => {
           </Link>
           <div className="vertical-line show-cont"></div>
           <div className="about-text">
-            <p className="home-text-about show-cont">
+            {/* <div className="arrow-container">
+              <GoArrowDownLeft className="arrow-down-left"/>
+            </div> */}
+            <p className="brief-info show-cont">
               I'm currently{" "}
-              <span className="a-text">
+              <span className="b-text">
                 pursuing a Bachelor's degree in Computer Science
               </span>{" "}
-              at CIIT and I am expected to graduate in 2027. My academic journey
-              has equipped me with a strong foundation in programming,
-              algorithms, and data structures, which I leverage in my projects
-              and research. I am passionate about applying my knowledge to
-              real-world problems and continuously expanding my skill set in the
-              ever-evolving field of technology.
+              at CIIT, graduating in 2027. Alongside my coursework in machine
+              learning, data mining, and statistics, I’ve earned DataCamp
+              certifications in Python, SQL, and Power BI, and I’ve led a thesis
+              team building PalTuro, a mobile app that matches learners and
+              mentors. Outside class, I keep learning by building small projects
+              and testing my results against simple baselines before trusting
+              them.
             </p>
           </div>
+        </div>
+        <div className="arrow-container">
+          <GoArrowDownLeft className="arrow-down-left" />
         </div>
       </div>
 
@@ -264,7 +270,7 @@ const Home = () => {
             ref={gallerySectionRef}
           >
             <p className="gallery">Projects Gallery</p>
-            <p className="gallery-text">These are some of my projects</p>
+            <p className="gallery-text">A few highlights from my work</p>
             {galleryFixed && (
               <>
                 <div

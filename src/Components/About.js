@@ -1,8 +1,37 @@
 import me from "../images/pinkme.jpg";
-// import { SiMicrosoftexcel, SiGooglecolab, SiPowerbi } from "react-icons/si";
 
 import "../Style/About.css";
 import { useState, useEffect } from "react";
+
+const schools = [
+  {
+    name: "Catagtaguen NHS",
+    year: "2016-2020",
+    label: "Junior High School",
+    story: [
+      "Write the first paragraph of your Junior High School story here.",
+      "Write the second paragraph here, such as what you learned or who shaped you.",
+    ],
+  },
+  {
+    name: "STI College of Laoag",
+    year: "2020-2022",
+    label: "Senior High School | MAWD Track",
+    story: [
+      "Write the first paragraph of your Senior High School story here.",
+      "Write the second paragraph here, such as projects you built or roles you took on.",
+    ],
+  },
+  {
+    name: "CIIT",
+    year: "2022-Present",
+    label: "Bachelor of Science in Computer Science",
+    story: [
+      "Write the first paragraph of your college story here.",
+      "Write the second paragraph here, such as your projects, internships, or certifications.",
+    ],
+  },
+];
 
 const About = () => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
@@ -12,6 +41,7 @@ const About = () => {
   const [c3Position, setC3Position] = useState({ x: 0, y: 0 });
   const [s1Position, setS1Position] = useState({ x: 0, y: 0 });
   const [s2Position, setS2Position] = useState({ x: 0, y: 0 });
+  const [selectedSchool, setSelectedSchool] = useState(null);
 
   const handleMouseMove = (e, setPosition) => {
     const rect = e.target.getBoundingClientRect();
@@ -25,9 +55,33 @@ const About = () => {
     setPosition({ x: 0, y: 0 });
   };
 
+  const handleCardKeyDown = (e, school) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      setSelectedSchool(school);
+    }
+  };
+
   useEffect(() => {
     document.title = "About - Jarell Tamonte";
   }, []);
+
+  useEffect(() => {
+    if (!selectedSchool) return;
+
+    const handleKeyDown = (e) => {
+      if (e.key === "Escape") setSelectedSchool(null);
+    };
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [selectedSchool]);
 
   return (
     <>
@@ -110,6 +164,10 @@ const About = () => {
           <div className="card-layer">
             <div
               className="card block"
+              role="button"
+              tabIndex={0}
+              onClick={() => setSelectedSchool(schools[0])}
+              onKeyDown={(e) => handleCardKeyDown(e, schools[0])}
               onMouseMove={(e) => handleMouseMove(e, setC1Position)}
               onMouseLeave={() => handleMouseLeave(setC1Position)}
               style={{
@@ -132,11 +190,14 @@ const About = () => {
                 <p className="award"><span className="number-highlight">(1)</span> Class Salutatorian</p>
                 <p className="award"><span className="number-highlight">(2)</span> Best in Performing Arts, English, and Social Science</p>
                 <p className="award"><span className="number-highlight">(3)</span> Junior High School President (2019-2020)</p>
-              
               </div>
             </div>
             <div
               className="card block"
+              role="button"
+              tabIndex={0}
+              onClick={() => setSelectedSchool(schools[1])}
+              onKeyDown={(e) => handleCardKeyDown(e, schools[1])}
               onMouseMove={(e) => handleMouseMove(e, setC2Position)}
               onMouseLeave={() => handleMouseLeave(setC2Position)}
               style={{
@@ -159,12 +220,15 @@ const About = () => {
                 <p className="award"><span className="number-highlight">(1)</span> Class Salutatorian</p>
                 <p className="award"><span className="number-highlight">(2)</span> Best in Innovation for STI Expo Awardee (2022)</p>
                 <p className="award"><span className="number-highlight">(3)</span> SSG President (2020-2022)</p>
-              
               </div>
             </div>
 
             <div
               className="card block"
+              role="button"
+              tabIndex={0}
+              onClick={() => setSelectedSchool(schools[2])}
+              onKeyDown={(e) => handleCardKeyDown(e, schools[2])}
               onMouseMove={(e) => handleMouseMove(e, setC3Position)}
               onMouseLeave={() => handleMouseLeave(setC3Position)}
               style={{
@@ -187,7 +251,6 @@ const About = () => {
                 <p className="award"><span className="number-highlight">(1)</span> Gold and Silver Weave Awardee</p>
                 <p className="award"><span className="number-highlight">(2)</span> Dean's List, 8 Semesters</p>
                 <p className="award"><span className="number-highlight">(3)</span> Best in Project for Machine Learning, Data Mining, and Algorithms and Complexity</p>
-              
               </div>
             </div>
           </div>
@@ -200,6 +263,45 @@ const About = () => {
           </div>
         </div>
       </div>
+      {selectedSchool && (
+        <div
+          className="modal-overlay"
+          onClick={() => setSelectedSchool(null)}
+        >
+          <div
+            className="modal-card"
+            role="dialog"
+            aria-modal="true"
+            aria-label={selectedSchool.name}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              type="button"
+              className="modal-close"
+              aria-label="Close"
+              onClick={() => setSelectedSchool(null)}
+            >
+              ×
+            </button>
+            <div className="card-heading">
+              <p className="school">{selectedSchool.name}</p>
+              <p className="school-year">{selectedSchool.year}</p>
+            </div>
+            <p className="school-label">{selectedSchool.label}</p>
+
+            <div className="school-line"></div>
+
+            <div className="modal-story">
+              <p className="awards-sub-title">My Story:</p>
+              {selectedSchool.story.map((paragraph, index) => (
+                <p className="modal-story-text" key={index}>
+                  {paragraph}
+                </p>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
       <div className="about-third-section">
         <div className="skills-overview">
           <p className="text-overview">Skills Overview</p>
@@ -279,29 +381,6 @@ const About = () => {
                   <i className="devicon-cplusplus-plain colored"></i>
                   <span className="tooltip">C++</span>
                 </div>
-                {/* <div className="icon-wrapper">
-                  <SiMicrosoftexcel className="icon-colored excel icon-big" />
-                  <span className="tooltip">Excel</span>
-                </div> */}
-
-                {/* <div className="icon-wrapper">
-                  <SiGooglecolab className="icon-colored colab" />
-                  <span className="tooltip">Google Colab</span>
-                </div> */}
-
-                {/* <div className="icon-wrapper">
-                  <SiPowerbi className="icon-colored powerbi icon-medium" />
-                  <span className="tooltip">Power BI</span>
-                </div> */}
-
-                {/* <div className="icon-wrapper">
-                  <img src={powerbi} alt="Power BI" className="custom-icon" />
-                  <span className="tooltip">Power BI</span>
-                </div>
-                <div className="icon-wrapper">
-                  <img src={excel} alt="Excel" className="custom-icon" />
-                  <span className="tooltip">Excel</span>
-                </div> */}
               </div>
             </div>
           </div>
