@@ -19,8 +19,8 @@ const schools = [
     year: "2020-2022",
     label: "Senior High School | MAWD Track",
     story: [
-      "My Senior High School years took place during the pandemic, which meant adjusting to online learning despite unstable internet connections, distractions at home, and limited access to instructors. I took the Mobile App and Web Development track, which deepened my appreciation for technology. For my thesis, I developed an Android tour guide app for travelers in Ilocos Norte, which received an award for innovation.",
-      "I also took on leadership roles in team activities and clubs, eventually being elected SSG President for the entire school for the 2021–2022 academic year. Working with faculty members and fellow officers to support students and organize school events was challenging, but rewarding at the same time. I was a consistent Honor Student, and graduated as the Class Salutatorian.",
+      "My Senior High School years took place during the pandemic, which meant adjusting to online learning despite unstable internet connections, distractions at home, and limited access to instructors. I took the Mobile App and Web Development track, which deepened my appreciation for technology and programming. For my thesis, I developed an Android tour guide app for travelers in Ilocos Norte, which received an award for innovation.",
+      "I also took on leadership roles in team activities and clubs, eventually being elected SSG President for the entire school for the 2021–2022 academic year. Working with faculty members and fellow officers to support students and organize school events was challenging, but rewarding at the same time as it made me more productive and disciplined. I was a consistent Honor Student, and graduated as the Class Salutatorian.",
     ],
   },
   {
