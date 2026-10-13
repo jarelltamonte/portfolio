@@ -63,7 +63,7 @@ export const certificatesData = [
     institution: "IBM",
     pdf: ibm_cybersecuirty,
     year: 2026,
-    ratio: "1.74 / 1"
+    ratio: "11 / 8.5"
   },
   {
     id: 7,
