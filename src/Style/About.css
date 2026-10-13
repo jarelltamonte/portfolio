@@ -340,6 +340,7 @@ body {
 .cert-grid .cert-card {
   width: 100%;
   padding: 12px;
+  box-sizing: border-box;
 }
 
 .cert-preview {
@@ -859,6 +860,7 @@ body {
    .card{
     width: 250px;
     height: fit-content;
+    box-sizing: border-box;
   }
 
 }
@@ -973,6 +975,10 @@ body {
 }
 
 @media (max-width: 690px) {
+  .about-outer{
+    gap: 14px;
+  }
+
   .card-layer {
     flex-direction: column;
     align-items: center;
