@@ -754,7 +754,10 @@ span.typed-cursor {
   }
 
   .circle {
-    right: -20%;
+    right: 20px;
+    top: 100px;
+    width: 150px;
+    height: 150px;
   }
 
   .second-section { 
