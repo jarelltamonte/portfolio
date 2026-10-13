@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.3c9ff387.css",
-    "main.js": "/portfolio/static/js/main.36b0d46c.js",
+    "main.css": "/portfolio/static/css/main.64fc34a8.css",
+    "main.js": "/portfolio/static/js/main.29431b69.js",
     "static/js/453.1226ac89.chunk.js": "/portfolio/static/js/453.1226ac89.chunk.js",
     "static/media/hotel3.png": "/portfolio/static/media/hotel3.78a81fd4ea7aed9ebdb1.png",
     "static/media/rizal3.png": "/portfolio/static/media/rizal3.f30383f5348b02d31eda.png",
@@ -26,6 +26,7 @@
     "static/media/wallpaperz4.png": "/portfolio/static/media/wallpaperz4.901f9436daf77f1251c9.png",
     "static/media/rizal4.png": "/portfolio/static/media/rizal4.7d2c4b051bbe850f5ec7.png",
     "static/media/rizal.png": "/portfolio/static/media/rizal.e76a20a3cdbd7eb1a19e.png",
+    "static/media/cisco-cyber.pdf": "/portfolio/static/media/cisco-cyber.968538b3abbc10101fb1.pdf",
     "static/media/hotel6.png": "/portfolio/static/media/hotel6.a4b8cc6dd9e6aa653ceb.png",
     "static/media/hotel4.png": "/portfolio/static/media/hotel4.8ba1922a2796b69b14dc.png",
     "static/media/aif1.png": "/portfolio/static/media/aif1.a8a4952155195d9afe78.png",
@@ -69,25 +70,35 @@
     "static/media/libook5.png": "/portfolio/static/media/libook5.fabed85eeb656955a219.png",
     "static/media/tasktrack2.png": "/portfolio/static/media/tasktrack2.14187a42aaa1f15b03ef.png",
     "static/media/tasc4.png": "/portfolio/static/media/tasc4.29ece305c314b04526e7.png",
+    "static/media/css.pdf": "/portfolio/static/media/css.21b637c5df03dea6a925.pdf",
+    "static/media/java.pdf": "/portfolio/static/media/java.56be4cf389c496206257.pdf",
+    "static/media/html.pdf": "/portfolio/static/media/html.0bc3caefadf8aeee655d.pdf",
     "static/media/stock.png": "/portfolio/static/media/stock.bee4bbbd170ca521172b.png",
     "static/media/libook4.png": "/portfolio/static/media/libook4.fe628e74de98b59fb970.png",
     "static/media/tasc1.png": "/portfolio/static/media/tasc1.7325fd4914b186c17847.png",
     "static/media/stock1.png": "/portfolio/static/media/stock1.f023bc315b4b80ebcd28.png",
+    "static/media/datascience.pdf": "/portfolio/static/media/datascience.eb0a69d653506a987882.pdf",
+    "static/media/powerbi.pdf": "/portfolio/static/media/powerbi.fffba8a195112c098659.pdf",
     "static/media/stock2.png": "/portfolio/static/media/stock2.029c34fed0733c5e2278.png",
     "static/media/libook1.png": "/portfolio/static/media/libook1.2c1b6f156454fc0feb64.png",
     "static/media/TAMONTE_Jarell_Resume.pdf": "/portfolio/static/media/TAMONTE_Jarell_Resume.cbe2a3449b8c93f1b8c4.pdf",
     "static/media/Jarell Tamonte.jpg": "/portfolio/static/media/Jarell Tamonte.e38b1b34d895f9309263.jpg",
+    "static/media/ui.pdf": "/portfolio/static/media/ui.1ef8c924b6c03f35b9df.pdf",
+    "static/media/cyber.pdf": "/portfolio/static/media/cyber.bc19dd08168ca0302392.pdf",
+    "static/media/python.pdf": "/portfolio/static/media/python.b044770650fce485de38.pdf",
+    "static/media/dataanalyst.pdf": "/portfolio/static/media/dataanalyst.10e7ddd7d2c5fd9f1cd1.pdf",
+    "static/media/sql.pdf": "/portfolio/static/media/sql.aed4a5996f30833fe52a.pdf",
     "static/media/slick.svg": "/portfolio/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/portfolio/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "index.html": "/portfolio/index.html",
     "static/media/slick.ttf": "/portfolio/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/portfolio/static/media/slick.295183786cd8a1389865.woff",
-    "main.3c9ff387.css.map": "/portfolio/static/css/main.3c9ff387.css.map",
-    "main.36b0d46c.js.map": "/portfolio/static/js/main.36b0d46c.js.map",
+    "main.64fc34a8.css.map": "/portfolio/static/css/main.64fc34a8.css.map",
+    "main.29431b69.js.map": "/portfolio/static/js/main.29431b69.js.map",
     "453.1226ac89.chunk.js.map": "/portfolio/static/js/453.1226ac89.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3c9ff387.css",
-    "static/js/main.36b0d46c.js"
+    "static/css/main.64fc34a8.css",
+    "static/js/main.29431b69.js"
   ]
 }
