@@ -749,20 +749,20 @@ span.typed-cursor {
     font-size: 65px;
   }
   .circle-about {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
   }
 
   .circle {
-    right: 20px;
+    right: 8%;
     top: 100px;
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
   }
 
   .second-section { 
-    padding: 0 8% 16%;
-    min-height: 50vh;
+    padding: 8% 8% 16%;
+    min-height: 60vh;
   }
 
   .arrow-container{
@@ -781,6 +781,7 @@ span.typed-cursor {
 
   div.about-text {
     margin-top: 0;
+    align-content: flex-start;
   }
 
   .third-first {

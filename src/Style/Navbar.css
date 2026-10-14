@@ -259,11 +259,14 @@ nav ul li a:hover{
 
 
 @media (max-width: 640px) {
+  .navbar{
+    margin: 8% 8% 2%;
+  }
+
   .navbar nav ul{
     top: 0;
     right: 0;
-  }
-    
+  }   
 }
 
 @media (max-width: 460px){
